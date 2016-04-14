@@ -151,12 +151,14 @@ class Config {
     function processEnvConfig() {
         // $HOME/.as3hx_config.xml or env
         if(cfgFile != null) {
+            /*
             if(!FileSystem.exists(cfgFile)) {
                 Sys.println("Creating " + cfgFile);
                 var fo = File.write(cfgFile, false);
                 fo.writeString(defaultConfig());
                 fo.close();
             }
+            */
             if(FileSystem.exists(cfgFile)) {
                 fromXmlString(File.getContent(cfgFile));
             }

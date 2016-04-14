@@ -228,7 +228,7 @@ class Config {
     }
 
     function processCommandLine() {
-        var args = Sys.args().slice(0);
+        var args = Sys.args().copy();
 		if (args.length == 0) {
             usage();
             Sys.exit(1);

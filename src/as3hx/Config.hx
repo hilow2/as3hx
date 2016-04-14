@@ -229,7 +229,10 @@ class Config {
 
     function processCommandLine() {
         var args = Sys.args().slice(0);
-		if (args.length == 0) return;
+		if (args.length == 0) {
+            usage();
+            Sys.exit(1);
+        }
         var last = new Path (args[args.length - 1]).toString ();
         if (((StringTools.endsWith (last, "/") && last != "/") || StringTools.endsWith (last, "\\")) && !StringTools.endsWith (last, ":\\")) {
             last = last.substr (0, last.length - 1);

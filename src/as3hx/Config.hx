@@ -233,6 +233,7 @@ class Config {
             usage();
             Sys.exit(1);
         }
+        /*
         var last = new Path (args[args.length - 1]).toString ();
         if (((StringTools.endsWith (last, "/") && last != "/") || StringTools.endsWith (last, "\\")) && !StringTools.endsWith (last, ":\\")) {
             last = last.substr (0, last.length - 1);
@@ -241,6 +242,7 @@ class Config {
             Sys.setCwd (last);
             args.pop ();
         }
+        */
         var arg = "";
         while(true) {
             arg = args.shift();
